@@ -13,6 +13,13 @@ public class CountThreadsMain {
     
     public static void main(String a[]){
         
+    	CountThread primerRango = new CountThread(0,99);
+    	CountThread segundoRango = new CountThread(99,199);
+    	CountThread tercerRango = new CountThread(199,299);
+    	
+    	primerRango.run();
+    	segundoRango.run();
+    	tercerRango.run();
     }
     
 }
