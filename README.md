@@ -3,6 +3,10 @@
 ### Arquitecturas de Software - ARSW
 ## Ejercicio Introducción al paralelismo - Hilos - Caso BlackListSearch
 
+## Integrantes
+
+* Carlos Andres Amorocho Amorocho
+* Rubian Camilo Saenz Rodriguez
 
 ### Dependencias:
 ####   Lecturas:
@@ -21,6 +25,10 @@
 	2. Inicie los tres hilos con 'start()'.
 	3. Ejecute y revise la salida por pantalla. 
 	4. Cambie el incio con 'start()' por 'run()'. Cómo cambia la salida?, por qué?.
+
+```
+Las salidas cambian ya que con start() los imprime en desorden a como esta establecido, mientras que con run() si los imprime en el orden esperado, esto se debe a que con start() los Threads se ejecutan de manera simultanea, mientras que con run() lo hace secuelcialmente.
+```
 
 **Parte II - Ejercicio Black List Search**
 
