@@ -6,6 +6,8 @@
 package edu.eci.arsw.blacklistvalidator;
 
 import edu.eci.arsw.spamkeywordsdatasource.HostBlacklistsDataSourceFacade;
+
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
@@ -28,26 +30,47 @@ public class HostBlackListsValidator {
      * NOT Trustworthy, and the list of the five blacklists returned.
      * @param ipaddress suspicious host's IP address.
      * @return  Blacklists numbers where the given host's IP address was found.
+     * @throws InterruptedException 
      */
-    public List<Integer> checkHost(String ipaddress){
+    public List<Integer> checkHost(String ipaddress, int numeroThreads) throws InterruptedException{
         
         LinkedList<Integer> blackListOcurrences=new LinkedList<>();
         
         int ocurrencesCount=0;
-        
+        int checkedListsCount=0;
         HostBlacklistsDataSourceFacade skds=HostBlacklistsDataSourceFacade.getInstance();
         
-        int checkedListsCount=0;
+        List<HostBlackListThread> threads = new ArrayList<HostBlackListThread>();
+        int cantidad = skds.getRegisteredServersCount()/numeroThreads; //Para dividir el espacio de busqueda en los N(numerosThreads) indicados
+        int inicio = 0;
+        int fin = inicio + cantidad;
         
-        for (int i=0;i<skds.getRegisteredServersCount() && ocurrencesCount<BLACK_LIST_ALARM_COUNT;i++){
-            checkedListsCount++;
-            
+        for (int i=0; i<numeroThreads; i++){
+        		//int valor = skds.getRegisteredServersCount()%numeroThreads;
+        		HostBlackListThread running = new HostBlackListThread(ipaddress, inicio, fin, skds);
+        		running.start();
+        		threads.add(running);
+        		inicio = fin + 1;
+        		fin = fin + cantidad + 1;
+        		
+            //checkedListsCount++;
             if (skds.isInBlackListServer(i, ipaddress)){
                 
                 blackListOcurrences.add(i);
                 
                 ocurrencesCount++;
             }
+        }
+        for(HostBlackListThread running : threads) {
+        	running.join();
+        }
+        for(HostBlackListThread running : threads) {
+        	checkedListsCount = checkedListsCount + running.getContadorListas();
+        	ocurrencesCount = ocurrencesCount + running.getOcurrencias();
+        	for(Integer i : running.getListaOcurrencias()) {
+        		blackListOcurrences.add(i);
+        	}
+        	
         }
         
         if (ocurrencesCount>=BLACK_LIST_ALARM_COUNT){
