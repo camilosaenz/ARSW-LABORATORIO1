@@ -122,22 +122,26 @@ Con lo anterior, y con los tiempos de ejecución dados, haga una gráfica de tie
 	![](img/ahmdahls.png), donde _S(n)_ es el mejoramiento teórico del desempeño, _P_ la fracción paralelizable del algoritmo, y _n_ el número de hilos, a mayor _n_, mayor debería ser dicha mejora. Por qué el mejor desempeño no se logra con los 500 hilos?, cómo se compara este desempeño cuando se usan 200?. 
 
 ```
-Como se puede evidenciar en la gráfica y los datos obtenidos por JVM, cuando pasamos de una unidad a su doble, vemos que el rendimiento  
-mejora notablemente, como es en la prueba de 4 hilos a 8 hilos, tuvimos un rendimiento mayor, también cuando pasamos de 50 a 100. Se debe  
-tener en cuenta que mejorar el rendimiento no solo consiste en aumentar la cantidad de hilos utilizados, también el rendimiento del computador  
-donde se realice las pruebas.
+Como se puede evidenciar en la gráfica y los datos obtenidos por JVM, cuando pasamos de una unidad  
+a su doble, vemos que el rendimiento mejora notablemente, como es en la prueba de 4 hilos a 8 hilos,  
+tuvimos un rendimiento mayor, también cuando pasamos de 50 a 100. Se debe tener en cuenta que  
+mejorar el rendimiento no solo consiste en aumentar la cantidad de hilos utilizados, también el  
+rendimiento del computador donde se realice las pruebas.
 ```
 
 2. Cómo se comporta la solución usando tantos hilos de procesamiento como núcleos comparado con el resultado de usar el doble de éste?.
 ```
-Al usar 4 hilos (En este caso el computador tenía 4 nucleos de procesamiento) vemos que el tiempo de ejecución fue de 31 segundos  
-aproximadamente, al probrar con una doble cantidad, este tiempo se redujo a casi la mitad, 16 segundos aproximadamente.
+Al usar 4 hilos (En este caso el computador tenía 4 nucleos de procesamiento) vemos que el tiempo  
+de ejecución fue de 31 segundos aproximadamente, al probrar con una doble cantidad, este tiempo  
+se redujo a casi la mitad, 16 segundos aproximadamente.
 ```
 
 3. De acuerdo con lo anterior, si para este problema en lugar de 100 hilos en una sola CPU se pudiera usar 1 hilo en cada una de 100 máquinas hipotéticas, la ley de Amdahls se aplicaría mejor?. Si en lugar de esto se usaran c hilos en 100/c máquinas distribuidas (siendo c es el número de núcleos de dichas máquinas), se mejoraría?. Explique su respuesta.
 ```
-Sí, si estamos usando 100 máquinas con un solo hilo el rendimiento en el trabajo mejoraría bastante, ya que las máquinas trabajarían  
-por aparte cada una sin compartir recursos. Si estamos distribuyendo la cantidad de hilos en 100 máquinas, esto empeoraría el  
-rendimiento, ya que cada máquina tendría que compartir recursos por la cantidad de hilos que tenga, sobrepasando el rendimiento de la máquina.
+Sí, si estamos usando 100 máquinas con un solo hilo el rendimiento en el trabajo mejoraría  
+bastante, ya que las máquinas trabajarían por aparte cada una sin compartir recursos.   
+Si estamos distribuyendo la cantidad de hilos en 100 máquinas, esto empeoraría el rendimiento,  
+ya que cada máquina tendría que compartir recursos por la cantidad de hilos que tenga,  
+sobrepasando el rendimiento de la máquina.
 ```
 
