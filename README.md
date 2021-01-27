@@ -81,31 +81,31 @@ A partir de lo anterior, implemente la siguiente secuencia de experimentos para 
 
 Al iniciar el programa ejecute el monitor jVisualVM, y a medida que corran las pruebas, revise y anote el consumo de CPU y de memoria en cada caso. 
 
-Cantidad de hilos: 1
+Cantidad de hilos: 1  
 Tiempo de ejecución: 129.329 segundos.
 
 <img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloUnoEclipse.PNG?raw=true">
 <img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloUnoJVM.PNG?raw=true">
 
-Cantidad de hilos: 4
+Cantidad de hilos: 4  
 Tiempo de ejecución: 31.425 segundos.
 
 <img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloIgualACantidadProcesadoresEclipse.PNG?raw=true">
 <img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloIgualACantidadProcesadoresJVM.PNG?raw=true">
 
-Cantidad de hilos: 8
+Cantidad de hilos: 8  
 Tiempo de ejecución: 16.32 segundos.
 
 <img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloDobleACantidadProcesadoresEclipse.PNG?raw=true">
 <img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloDobleACantidadProcesadoresJVM.PNG?raw=true">
 
-Cantidad de hilos: 50
+Cantidad de hilos: 50  
 Tiempo de ejecución: 3.157 segundos.
 
 <img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloCincuentaEclipse.PNG?raw=true">
 <img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloCincuentaJVM.PNG?raw=true">
 
-Cantidad de hilos: 100
+Cantidad de hilos: 100  
 Tiempo de ejecución: 2.182 segundos.
 
 <img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloCienEclipse.PNG?raw=true">
