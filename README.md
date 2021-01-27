@@ -80,8 +80,17 @@ A partir de lo anterior, implemente la siguiente secuencia de experimentos para 
 5. 100 hilos.
 
 Al iniciar el programa ejecute el monitor jVisualVM, y a medida que corran las pruebas, revise y anote el consumo de CPU y de memoria en cada caso. 
-![](img/hiloUnoEclipse.png)
-![](img/hiloUnoJVM.png)
+<img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloUnoEclipse.PNG?raw=true">
+<img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloUnoJVM.PNG?raw=true">
+<img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloIgualACantidadProcesadoresEclipse.PNG?raw=true">
+<img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloIgualACantidadProcesadoresJVM.PNG?raw=true">
+<img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloDobleACantidadProcesadoresEclipse.PNG?raw=true">
+<img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloDobleACantidadProcesadoresJVM.PNG?raw=true">
+<img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloCincuentaEclipse.PNG?raw=true">
+<img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloCincuentaJVM.PNG?raw=true">
+<img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloCienEclipse.PNG?raw=true">
+<img src="https://github.com/camilosaenz/ARSW-LABORATORIO1/blob/master/img/hiloCienJVM.PNG?raw=true">
+
 
 
 Con lo anterior, y con los tiempos de ejecución dados, haga una gráfica de tiempo de solución vs. número de hilos. Analice y plantee hipótesis con su compañero para las siguientes preguntas (puede tener en cuenta lo reportado por jVisualVM):
