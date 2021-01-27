@@ -17,7 +17,9 @@ public class Main {
     	long inicioTiempo = System.currentTimeMillis();
         HostBlackListsValidator hblv=new HostBlackListsValidator();
         //Se cambio la clase Main, para poder obtener los datos al ejecutar con cierta cantidad de Threads
-        List<Integer> blackListOcurrences=hblv.checkHost("200.24.34.55", 50);
+        int n = Runtime.getRuntime().availableProcessors();
+        System.out.println("ss: "+n);
+        List<Integer> blackListOcurrences=hblv.checkHost("200.24.34.55", n);
         System.out.println("The host was found in the following blacklists:"+blackListOcurrences);
         long finTiempo = System.currentTimeMillis();
         System.out.println(finTiempo - inicioTiempo);
